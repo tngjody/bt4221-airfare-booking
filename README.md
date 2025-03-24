@@ -22,11 +22,41 @@ We will use the "Flight Prices 2M" dataset for this project, which is available 
 - **File Size**: 744.5 MB
 
 ## Installation
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/bt4221-airfare-booking.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd bt4221-airfare-booking
-    ```
+## 📂 Downloading the Repository with Git LFS
+This repository uses **Git Large File Storage (LFS)** to manage large files such as `flight.csv`. Follow these steps to properly clone the repository and retrieve all LFS files.
+
+### 🛠 Step 1: Install Git LFS
+Before cloning, ensure Git LFS is installed on your system:
+
+- **Windows / Mac / Linux**  
+```sh 
+  git lfs install
+```
+
+### 📥 Step 2: Clone the Repository
+```sh 
+git clone https://github.com/tngjody/bt4221-airfare-booking.git
+cd bt4221-airfare-booking
+git lfs pull
+```
+
+⚠ Important: The git lfs pull command is required to download the actual LFS files (e.g., flight.csv).
+If skipped, you will only get small pointer files instead of the real dataset.
+
+### 🔄 Step 3: Already Cloned? Fetch LFS Files
+If you have already cloned the repository without LFS and see placeholder pointer files instead of actual data, run:
+```sh
+git lfs install
+git lfs pull
+```
+
+### ✅ Step 4: verify LFS Files
+To check whether `flight.csv` and other LFS files have been correctly downloaded, run:
+```sh
+git lfs ls-files
+```
+If the file appears in the output, it has been successfully retrieved via LFS.
+
+
+
+
