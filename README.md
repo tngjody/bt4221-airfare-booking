@@ -1,7 +1,7 @@
 # Airfare Booking System
 
 ## Overview
-This project aims to predict the optimal time to book flight tickets based on a traveler’s destination and departure date, by analyzing historical pricing data. The optimal booking time is defined as the period when the fare falls below the 25th percentile of historical price distributions for similar routes. This helps travelers identify the lowest possible fare for their desired routes. Flight prices fluctuate due to various factors, making it difficult for travelers to determine the best time to book. By leveraging machine learning techniques, our project helps to provide data-driven insights to optimize travel planning. This can benefit both individual travelers looking for cost savings and businesses managing corporate travel budgets.
+This project aims to predict the optimal time to book flight tickets based on a traveler’s destination and departure date, by analyzing historical pricing data. The optimal booking time is defined as the period when the fare falls below the **25th percentile of historical price distributions** for similar routes. This helps travelers identify the lowest possible fare for their desired routes. Flight prices fluctuate due to various factors, making it difficult for travelers to determine the best time to book. By leveraging machine learning techniques, our project helps to provide data-driven insights to optimize travel planning. This can benefit both individual travelers looking for cost savings and businesses managing corporate travel budgets.
 
 ### Focus Areas
 - Predicting future flight ticket prices based on historical data.
@@ -30,7 +30,7 @@ Before cloning, ensure Git LFS is installed on your system:
 
 - **Windows / Mac / Linux**  
 ```sh 
-  git lfs install
+git lfs install
 ```
 
 ### 📥 Step 2: Clone the Repository
@@ -40,7 +40,7 @@ cd bt4221-airfare-booking
 git lfs pull
 ```
 
-⚠ Important: The git lfs pull command is required to download the actual LFS files (e.g., flight.csv).
+⚠ Important: The `git lfs pull` command is required to download the actual LFS files (e.g., `flight.csv`).  
 If skipped, you will only get small pointer files instead of the real dataset.
 
 ### 🔄 Step 3: Already Cloned? Fetch LFS Files
@@ -50,13 +50,12 @@ git lfs install
 git lfs pull
 ```
 
-### ✅ Step 4: verify LFS Files
+### ✅ Step 4: Verify LFS Files
 To check whether `flight.csv` and other LFS files have been correctly downloaded, run:
 ```sh
 git lfs ls-files
 ```
 If the file appears in the output, it has been successfully retrieved via LFS.
 
-
-
-
+## Notes for Databricks Users
+If you are running this project on Databricks, note that there are commented `display()` codes in the scripts. These can be uncommented to visualize dataframes and other outputs directly within the Databricks environment.
